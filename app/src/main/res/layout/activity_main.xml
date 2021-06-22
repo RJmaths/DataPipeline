@@ -32,6 +32,7 @@
 
     <Button
         android:id="@+id/buttonDelete"
+        android:onClick="deleteLatest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Delete latest entry"

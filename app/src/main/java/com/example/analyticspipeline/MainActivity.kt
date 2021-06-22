@@ -36,6 +36,11 @@ class MainActivity : AppCompatActivity() {
         updateList()
     }
 
+    fun deleteLatest(view: View) {
+        analyticsDao.delete(analyticsDao.getLatestAnalytic())
+        updateList()
+    }
+
     private fun updateList(){
         val analytics: List<Analytic> = analyticsDao.getAll()
 

@@ -30,11 +30,14 @@ interface AnalyticsDao {
     @Query("SELECT * FROM analytic")
     fun getAll(): List<Analytic>
 
+    @Query("SELECT * FROM analytic ORDER BY id DESC LIMIT 1")
+    fun getLatestAnalytic(): Analytic
+
     @Insert//(onConflict = OnConflictStrategy.REPLACE)
     fun insert(analytic: Analytic)
 
     @Delete
-    fun delete(analytics: Analytic)
+    fun delete(analytic: Analytic)
 }
 
 
