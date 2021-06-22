@@ -1,0 +1,2 @@
+rootProject.name = "Analytics Pipeline"
+include ':app'
